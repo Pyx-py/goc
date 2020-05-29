@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/pflag"
 	"goc/config"
 	"goc/constant"
@@ -12,6 +13,7 @@ import (
 var confFile = pflag.StringP("config", "c", "", "config file path")
 
 func main() {
+	log.SetReportCaller(true)
 	pflag.Parse()
 	config.InitConfig(*confFile)
 	conf := config.GetConfig()
