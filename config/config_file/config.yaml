@@ -4,3 +4,5 @@ Database:
   User : root
   Password : admin
   DbName : blog
+Server:
+  Port : ":8000"

@@ -14,6 +14,9 @@ type Config struct {
 		Password string
 		DbName   string
 	}
+	Server struct {
+		Port string
+	}
 }
 
 var c = new(Config)
